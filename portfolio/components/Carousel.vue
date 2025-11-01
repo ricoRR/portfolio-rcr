@@ -49,25 +49,24 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { useAssetPath } from '~/composables/useAssetPath';
 
 const carouselItems = [
   {
-    src: useAssetPath('/images/carousel-agile.png'),
+    src: 'images/carousel-agile.png',
     alt: 'Gestion de projet agile',
     title: 'Organisation agile',
     description:
       "Planification sur Trello, revues hebdo et priorisation continue pour livrer des incréments testables.",
   },
   {
-    src: useAssetPath('/images/carousel-collab.png'),
+    src: 'images/carousel-collab.png',
     alt: 'Collaboration et code review',
     title: 'Collaboration continue',
     description:
       "Pair programming, revues de code et documentation technique pour partager la connaissance au sein de l’équipe.",
   },
   {
-    src: useAssetPath('/images/hero-portrait.jpg'),
+    src: 'images/hero-portrait.jpg',
     alt: 'Veille technologique',
     title: 'Veille & montée en compétence',
     description:

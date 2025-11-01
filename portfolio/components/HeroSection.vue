@@ -77,7 +77,5 @@
 </template>
 
 <script setup lang="ts">
-import { useAssetPath } from '~/composables/useAssetPath';
-
-const heroImage = useAssetPath('/images/hero-portrait.jpg');
+const heroImage = 'images/hero-portrait.jpg';
 </script>

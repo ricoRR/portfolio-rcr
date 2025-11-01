@@ -71,23 +71,22 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useAssetPath } from '~/composables/useAssetPath';
 
 const images = [
   {
-    src: useAssetPath('/images/gallery-top-hardware.png'),
+    src: 'images/gallery-top-hardware.png',
     alt: 'Interface du projet TopHardware',
     title: 'TopHardware',
     caption: 'E-commerce · Catalogue produit et tunnel de paiement Stripe',
   },
   {
-    src: useAssetPath('/images/gallery-myquizz.png'),
+    src: 'images/gallery-myquizz.png',
     alt: 'Interface du jeu MyQuizz',
     title: 'MyQuizz',
     caption: 'Back office admin et quiz multi-joueurs',
   },
   {
-    src: useAssetPath('/images/gallery-puissance4.jpg'),
+    src: 'images/gallery-puissance4.jpg',
     alt: 'Prototype Puissance 4',
     title: 'Puissance 4',
     caption: 'Jeu modulaire orienté objet · Interface responsive',

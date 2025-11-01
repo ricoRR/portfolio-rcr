@@ -52,7 +52,6 @@
 
 <script setup>
 import { ref, computed } from 'vue';
-import { useAssetPath } from '~/composables/useAssetPath';
 
 const formData = ref({
   name: '',
@@ -70,15 +69,15 @@ const projects = ref([
 ]);
 
 const carouselItems = ref([
-  { src: useAssetPath('/images/item1.png'), alt: 'Item 1' },
-  { src: useAssetPath('/images/item2.png'), alt: 'Item 2' },
-  { src: useAssetPath('/images/item3.png'), alt: 'Item 3' },
-  { src: useAssetPath('/images/item4.png'), alt: 'Item 4' },
-  { src: useAssetPath('/images/item5.png'), alt: 'Item 5' },
-  { src: useAssetPath('/images/item6.png'), alt: 'Item 6' },
-  { src: useAssetPath('/images/item7.png'), alt: 'Item 7' },
-  { src: useAssetPath('/images/item8.png'), alt: 'Item 8' },
-  { src: useAssetPath('/images/item9.png'), alt: 'Item 9' },
+  { src: 'images/item1.png', alt: 'Item 1' },
+  { src: 'images/item2.png', alt: 'Item 2' },
+  { src: 'images/item3.png', alt: 'Item 3' },
+  { src: 'images/item4.png', alt: 'Item 4' },
+  { src: 'images/item5.png', alt: 'Item 5' },
+  { src: 'images/item6.png', alt: 'Item 6' },
+  { src: 'images/item7.png', alt: 'Item 7' },
+  { src: 'images/item8.png', alt: 'Item 8' },
+  { src: 'images/item9.png', alt: 'Item 9' },
 ]);
 
 const selectedItem = ref(carouselItems.value[0]);
