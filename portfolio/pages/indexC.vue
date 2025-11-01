@@ -68,16 +68,26 @@ const projects = ref([
   { title: 'Project Two', description: 'Description for project two.' },
 ]);
 
+const {
+  app: { baseURL },
+} = useRuntimeConfig();
+
+function assetUrl(path) {
+  const normalizedBase = baseURL.endsWith('/') ? baseURL.slice(0, -1) : baseURL;
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${normalizedBase}/${normalizedPath}`;
+}
+
 const carouselItems = ref([
-  { src: '/images/item1.png', alt: 'Item 1' },
-  { src: '/images/item2.png', alt: 'Item 2' },
-  { src: '/images/item3.png', alt: 'Item 3' },
-  { src: '/images/item4.png', alt: 'Item 4' },
-  { src: '/images/item5.png', alt: 'Item 5' },
-  { src: '/images/item6.png', alt: 'Item 6' },
-  { src: '/images/item7.png', alt: 'Item 7' },
-  { src: '/images/item8.png', alt: 'Item 8' },
-  { src: '/images/item9.png', alt: 'Item 9' },
+  { src: assetUrl('images/item1.png'), alt: 'Item 1' },
+  { src: assetUrl('images/item2.png'), alt: 'Item 2' },
+  { src: assetUrl('images/item3.png'), alt: 'Item 3' },
+  { src: assetUrl('images/item4.png'), alt: 'Item 4' },
+  { src: assetUrl('images/item5.png'), alt: 'Item 5' },
+  { src: assetUrl('images/item6.png'), alt: 'Item 6' },
+  { src: assetUrl('images/item7.png'), alt: 'Item 7' },
+  { src: assetUrl('images/item8.png'), alt: 'Item 8' },
+  { src: assetUrl('images/item9.png'), alt: 'Item 9' },
 ]);
 
 const selectedItem = ref(carouselItems.value[0]);

@@ -71,21 +71,31 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+const {
+  app: { baseURL },
+} = useRuntimeConfig();
+
+function assetUrl(path: string) {
+  const normalizedBase = baseURL.endsWith('/') ? baseURL.slice(0, -1) : baseURL;
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${normalizedBase}/${normalizedPath}`;
+}
+
 const images = [
   {
-    src: '/images/gallery-top-hardware.png',
+    src: assetUrl('images/gallery-top-hardware.png'),
     alt: 'Interface du projet TopHardware',
     title: 'TopHardware',
     caption: 'E-commerce · Catalogue produit et tunnel de paiement Stripe',
   },
   {
-    src: '/images/gallery-myquizz.png',
+    src: assetUrl('images/gallery-myquizz.png'),
     alt: 'Interface du jeu MyQuizz',
     title: 'MyQuizz',
     caption: 'Back office admin et quiz multi-joueurs',
   },
   {
-    src: '/images/gallery-puissance4.jpg',
+    src: assetUrl('images/gallery-puissance4.jpg'),
     alt: 'Prototype Puissance 4',
     title: 'Puissance 4',
     caption: 'Jeu modulaire orienté objet · Interface responsive',

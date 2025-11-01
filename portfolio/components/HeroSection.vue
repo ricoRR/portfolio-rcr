@@ -58,7 +58,7 @@
       <div class="relative flex-1">
         <div class="relative mx-auto max-w-sm">
           <img
-            src="/images/hero-portrait.jpg"
+            :src="assetUrl('images/hero-portrait.jpg')"
             alt="Portrait de Ricardo"
             class="h-full w-full rounded-3xl object-cover shadow-[0_0_60px_rgba(255,221,0,0.25)]"
           />
@@ -75,3 +75,15 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const {
+  app: { baseURL },
+} = useRuntimeConfig();
+
+function assetUrl(path: string) {
+  const normalizedBase = baseURL.endsWith('/') ? baseURL.slice(0, -1) : baseURL;
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${normalizedBase}/${normalizedPath}`;
+}
+</script>
