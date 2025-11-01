@@ -4,7 +4,7 @@
       <h2 class="text-[#ffdd00] text-2xl mb-6">My Carousel</h2>
       <div class="flex flex-col items-center gap-6">
         <div v-if="selectedItem" class="w-full flex justify-center mb-4">
-          <NuxtImg
+          <img
             :src="selectedItem.src"
             :alt="selectedItem.alt"
             class="max-w-full md:max-w-[50%] h-auto object-cover rounded-lg shadow-lg"
@@ -37,7 +37,7 @@
               class="cursor-pointer transition-transform duration-200 hover:scale-105"
               @click="selectItem(item)"
             >
-              <NuxtImg
+              <img
                 :src="item.src"
                 :alt="item.alt"
                 class="w-24 h-24 object-cover rounded-md"
@@ -69,15 +69,15 @@ const projects = ref([
 ]);
 
 const carouselItems = ref([
-  { src: '/images/item1.jpg', alt: 'Item 1' },
-  { src: '/images/item2.jpg', alt: 'Item 2' },
-  { src: '/images/item3.jpg', alt: 'Item 3' },
-  { src: '/images/item4.jpg', alt: 'Item 4' },
-  { src: '/images/item5.jpg', alt: 'Item 5' },
-  { src: '/images/item6.jpg', alt: 'Item 6' },
-  { src: '/images/item7.jpg', alt: 'Item 7' },
-  { src: '/images/item8.jpg', alt: 'Item 8' },
-  { src: '/images/item9.jpg', alt: 'Item 9' },
+  { src: '/images/item1.png', alt: 'Item 1' },
+  { src: '/images/item2.png', alt: 'Item 2' },
+  { src: '/images/item3.png', alt: 'Item 3' },
+  { src: '/images/item4.png', alt: 'Item 4' },
+  { src: '/images/item5.png', alt: 'Item 5' },
+  { src: '/images/item6.png', alt: 'Item 6' },
+  { src: '/images/item7.png', alt: 'Item 7' },
+  { src: '/images/item8.png', alt: 'Item 8' },
+  { src: '/images/item9.png', alt: 'Item 9' },
 ]);
 
 const selectedItem = ref(carouselItems.value[0]);

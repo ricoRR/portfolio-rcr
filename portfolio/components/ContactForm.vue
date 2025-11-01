@@ -72,30 +72,31 @@ const loading = ref(false);
 const successMessage = ref('');
 const errorMessage = ref('');
 
+const {
+  submitContactRequest,
+  defaultSuccessMessage,
+  defaultErrorMessage,
+} = useContactForm();
+
 async function submitForm() {
   successMessage.value = '';
   errorMessage.value = '';
   loading.value = true;
 
   try {
-    const response = await $fetch('/api/contact', {
-      method: 'POST',
-      body: {
-        name: formData.value.name,
-        email: formData.value.email,
-        message: formData.value.message,
-      },
+    const responseMessage = await submitContactRequest({
+      name: formData.value.name,
+      email: formData.value.email,
+      message: formData.value.message,
     });
 
-    if (response?.success) {
-      successMessage.value = response.message;
-      formData.value = { name: '', email: '', message: '' };
-    } else {
-      errorMessage.value = response?.message ?? 'Une erreur est survenue. Merci de réessayer.';
-    }
+    successMessage.value = responseMessage || defaultSuccessMessage;
+    formData.value = { name: '', email: '', message: '' };
   } catch (error) {
     console.error(error);
-    errorMessage.value = 'Une erreur est survenue. Merci de réessayer plus tard.';
+    const message =
+      error instanceof Error ? error.message : defaultErrorMessage;
+    errorMessage.value = message || defaultErrorMessage;
   } finally {
     loading.value = false;
   }

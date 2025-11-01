@@ -57,8 +57,8 @@
 
       <div class="relative flex-1">
         <div class="relative mx-auto max-w-sm">
-          <NuxtImg
-            :src="heroImage"
+          <img
+            src="/images/hero-portrait.jpg"
             alt="Portrait de Ricardo"
             class="h-full w-full rounded-3xl object-cover shadow-[0_0_60px_rgba(255,221,0,0.25)]"
           />
@@ -75,7 +75,3 @@
     </div>
   </section>
 </template>
-
-<script setup>
-import heroImage from '~/assets/BkoaWgbf.jpg';
-</script>

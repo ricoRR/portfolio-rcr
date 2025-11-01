@@ -31,7 +31,7 @@
         </div>
         <article class="flex-1 rounded-3xl border border-[#ffdd00]/15 bg-[#161616] p-6 shadow-[0_0_25px_rgba(255,221,0,0.05)]">
           <div class="overflow-hidden rounded-2xl border border-[#ffdd00]/10">
-            <NuxtImg
+            <img
               :src="activeItem.src"
               :alt="activeItem.alt"
               class="h-56 w-full object-cover"
@@ -50,27 +50,23 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 
-import imageAgile from '~/assets/1.png';
-import imageCollab from '~/assets/2.png';
-import imageVeille from '~/assets/BkoaWgbf.jpg';
-
 const carouselItems = [
   {
-    src: imageAgile,
+    src: '/images/carousel-agile.png',
     alt: 'Gestion de projet agile',
     title: 'Organisation agile',
     description:
       "Planification sur Trello, revues hebdo et priorisation continue pour livrer des incréments testables.",
   },
   {
-    src: imageCollab,
+    src: '/images/carousel-collab.png',
     alt: 'Collaboration et code review',
     title: 'Collaboration continue',
     description:
       "Pair programming, revues de code et documentation technique pour partager la connaissance au sein de l’équipe.",
   },
   {
-    src: imageVeille,
+    src: '/images/hero-portrait.jpg',
     alt: 'Veille technologique',
     title: 'Veille & montée en compétence',
     description:

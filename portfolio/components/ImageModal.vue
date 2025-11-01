@@ -20,7 +20,7 @@
           class="group relative overflow-hidden rounded-2xl border border-[#ffdd00]/20 bg-[#151515]"
           @click="openModal(item)"
         >
-          <NuxtImg
+          <img
             :src="item.src"
             :alt="item.alt"
             class="h-40 w-full object-cover transition duration-300 group-hover:scale-105"
@@ -58,7 +58,7 @@
               </svg>
             </button>
           </header>
-          <NuxtImg
+          <img
             :src="activeItem?.src"
             :alt="activeItem?.alt"
             class="h-96 w-full object-cover"
@@ -71,25 +71,21 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import galleryTopHardware from '~/assets/1.png';
-import galleryMyQuizz from '~/assets/2.png';
-import galleryPuissance4 from '~/assets/BkoaWgbf.jpg';
-
 const images = [
   {
-    src: galleryTopHardware,
+    src: '/images/gallery-top-hardware.png',
     alt: 'Interface du projet TopHardware',
     title: 'TopHardware',
     caption: 'E-commerce · Catalogue produit et tunnel de paiement Stripe',
   },
   {
-    src: galleryMyQuizz,
+    src: '/images/gallery-myquizz.png',
     alt: 'Interface du jeu MyQuizz',
     title: 'MyQuizz',
     caption: 'Back office admin et quiz multi-joueurs',
   },
   {
-    src: galleryPuissance4,
+    src: '/images/gallery-puissance4.jpg',
     alt: 'Prototype Puissance 4',
     title: 'Puissance 4',
     caption: 'Jeu modulaire orienté objet · Interface responsive',

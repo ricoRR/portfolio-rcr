@@ -39,8 +39,8 @@
         <ul class="list-disc space-y-2 pl-6 text-sm">
           <li>Accueil structuré autour d’un hero, d’un aperçu du parcours et d’un call-to-action.</li>
           <li>Sections dédiées : À propos, Points forts, Projets, Galerie, Authentification, Contact.</li>
-          <li>API Node/Nuxt pour la gestion du formulaire de contact et de l’authentification.</li>
-          <li>Envoi de courriels via Nodemailer configuré avec un SMTP tiers.</li>
+          <li>Formulaire de contact branché sur un service externe (Formspree, EmailJS, etc.).</li>
+          <li>API Node/Nuxt pour l’authentification et, en option, la gestion serveur du formulaire.</li>
         </ul>
       </section>
 
@@ -66,9 +66,9 @@
         <ul class="list-disc space-y-2 pl-6 text-sm">
           <li>Nuxt 3 (Vue 3) pour le rendu côté client et l’hébergement des API Nitro.</li>
           <li>Tailwind CSS 4 (plugin Vite) pour le design system.</li>
-          <li>Nodemailer pour l’intégration SMTP.</li>
-          <li>Runtime Config gère les secrets (SMTP & authentification).</li>
-          <li>Déploiement cible : hébergement Node (Render, Railway, ou VPS).</li>
+          <li>`useContactForm` pilote l’appel au service externe (configuré via `NUXT_PUBLIC_CONTACT_FORM_ENDPOINT`).</li>
+          <li>Runtime Config gère les secrets (authentification) et les variables publiques (`NUXT_PUBLIC_*`).</li>
+          <li>Déploiements cibles : GitHub Pages (statique) ou hébergement Node (Render, Railway, VPS) pour activer Nitro.</li>
         </ul>
       </section>
 

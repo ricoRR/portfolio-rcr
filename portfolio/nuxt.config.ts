@@ -25,6 +25,9 @@ export default defineNuxtConfig({
 
     public: {
       siteName: 'Portfolio',
+      contactFormEndpoint: process.env.NUXT_PUBLIC_CONTACT_FORM_ENDPOINT,
+      contactFormSuccessMessage: process.env.NUXT_PUBLIC_CONTACT_FORM_SUCCESS_MESSAGE,
+      contactFormErrorMessage: process.env.NUXT_PUBLIC_CONTACT_FORM_ERROR_MESSAGE,
     },
   },
 
