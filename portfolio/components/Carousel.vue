@@ -49,34 +49,25 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-
-const {
-  app: { baseURL },
-} = useRuntimeConfig();
-
-function assetUrl(path: string) {
-  const normalizedBase = baseURL.endsWith('/') ? baseURL.slice(0, -1) : baseURL;
-  const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
-  return `${normalizedBase}/${normalizedPath}`;
-}
+import { useAssetPath } from '~/composables/useAssetPath';
 
 const carouselItems = [
   {
-    src: assetUrl('images/carousel-agile.png'),
+    src: useAssetPath('/images/carousel-agile.png'),
     alt: 'Gestion de projet agile',
     title: 'Organisation agile',
     description:
       "Planification sur Trello, revues hebdo et priorisation continue pour livrer des incréments testables.",
   },
   {
-    src: assetUrl('images/carousel-collab.png'),
+    src: useAssetPath('/images/carousel-collab.png'),
     alt: 'Collaboration et code review',
     title: 'Collaboration continue',
     description:
       "Pair programming, revues de code et documentation technique pour partager la connaissance au sein de l’équipe.",
   },
   {
-    src: assetUrl('images/hero-portrait.jpg'),
+    src: useAssetPath('/images/hero-portrait.jpg'),
     alt: 'Veille technologique',
     title: 'Veille & montée en compétence',
     description:

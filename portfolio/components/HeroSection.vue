@@ -58,7 +58,7 @@
       <div class="relative flex-1">
         <div class="relative mx-auto max-w-sm">
           <img
-            :src="assetUrl('images/hero-portrait.jpg')"
+            :src="heroImage"
             alt="Portrait de Ricardo"
             class="h-full w-full rounded-3xl object-cover shadow-[0_0_60px_rgba(255,221,0,0.25)]"
           />
@@ -77,13 +77,7 @@
 </template>
 
 <script setup lang="ts">
-const {
-  app: { baseURL },
-} = useRuntimeConfig();
+import { useAssetPath } from '~/composables/useAssetPath';
 
-function assetUrl(path: string) {
-  const normalizedBase = baseURL.endsWith('/') ? baseURL.slice(0, -1) : baseURL;
-  const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
-  return `${normalizedBase}/${normalizedPath}`;
-}
+const heroImage = useAssetPath('/images/hero-portrait.jpg');
 </script>
