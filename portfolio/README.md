@@ -7,25 +7,28 @@ Portfolio Nuxt 3 présentant mon profil de développeur web fullstack en alterna
 - Présentation détaillée (expériences, compétences, langues).
 - Carousel "Points forts" et galerie modale.
 - Liste de projets avec stack et rôle.
-- Formulaire de contact relié à un SMTP (Nodemailer) et persistance des messages en SQLite.
+- Formulaire de contact compatible GitHub Pages via un endpoint externe configurable (Formspree, EmailJS, etc.).
 - Authentification durcie (validation de format, mot de passe fort, verrouillage) pour accéder aux documents.
 - Documentation accessible sous `/docs/*`.
 
 ## Démarrage
 ```bash
 npm install
-cp .env.example .env  # puis renseigner les valeurs SMTP + identifiants auth
+cp .env.example .env  # puis renseigner l’endpoint du formulaire + identifiants auth/SMTP si besoin
 npm run dev
 ```
 
 ### Variables d’environnement
 | Clé | Description |
 |-----|-------------|
-| `MAIL_HOST` | Hôte SMTP |
-| `MAIL_PORT` | Port SMTP |
-| `MAIL_USER` | Identifiant SMTP |
-| `MAIL_PASS` | Mot de passe SMTP |
-| `MAIL_RECIPIENT` | Destinataire des messages (défaut : `MAIL_USER`) |
+| `NUXT_PUBLIC_CONTACT_FORM_ENDPOINT` | URL du service de formulaires (Formspree, etc.). Obligatoire pour GitHub Pages. |
+| `NUXT_PUBLIC_CONTACT_FORM_SUCCESS_MESSAGE` | Message de confirmation personnalisé (optionnel). |
+| `NUXT_PUBLIC_CONTACT_FORM_ERROR_MESSAGE` | Message d’erreur personnalisé (optionnel). |
+| `MAIL_HOST` | (Optionnel) Hôte SMTP pour la route `/api/contact` en déploiement Node. |
+| `MAIL_PORT` | (Optionnel) Port SMTP. |
+| `MAIL_USER` | (Optionnel) Identifiant SMTP. |
+| `MAIL_PASS` | (Optionnel) Mot de passe SMTP. |
+| `MAIL_RECIPIENT` | (Optionnel) Destinataire des messages (défaut : `MAIL_USER`). |
 | `AUTH_EMAIL` | Email autorisé pour l’espace partenaire |
 | `AUTH_PASSWORD` | Mot de passe associé |
 | `AUTH_MAX_ATTEMPTS` | Nombre d’essais avant blocage (optionnel) |
@@ -41,13 +44,13 @@ npm run dev
 ```
 components/      # Sections du site (Hero, About, Projects, Gallery, Auth, Contact)
 pages/           # Routes (homepage + documentation)
-server/api/      # API contact & auth
-server/services/ # Logique métier (authentification, contact)
-server/utils/    # Initialisation de la base SQLite
-composables/     # Gestion de l’état d’authentification
+server/api/      # API auth et (optionnel) contact via SMTP pour hébergement Node
+server/services/ # Logique métier (authentification, contact serveur)
+server/utils/    # Initialisation de la base SQLite (uniquement si API contact côté serveur)
+composables/     # Gestion de l’état d’authentification et formulaire de contact
 public/          # Assets statiques (maquette SVG, images)
 docs/            # Documentation projet
-data/            # Base SQLite (messages de contact)
+data/            # Base SQLite (messages de contact, pour déploiement Node)
 Dockerfile       # Industrialisation via conteneur
 ```
 
@@ -68,6 +71,8 @@ node .output/server/index.mjs
 docker build -t portfolio-nuxt .
 docker run --env-file .env -v $(pwd)/data:/app/data -p 3000:3000 portfolio-nuxt
 ```
+
+Pour GitHub Pages, configurez `NUXT_PUBLIC_CONTACT_FORM_ENDPOINT` vers votre service (Formspree, etc.) puis utilisez la GitHub Action `Deploy Nuxt site to Pages`.
 
 ## Licence
 Projet personnel – reproduction ou adaptation autorisée pour usage pédagogique.
