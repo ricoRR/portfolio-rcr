@@ -5,9 +5,6 @@
         © {{ new Date().getFullYear() }} Ricardo Chaves Rodrigues. Tous droits réservés.
       </p>
       <div class="flex flex-wrap gap-4 text-xs uppercase tracking-[0.3em]">
-        <NuxtLink class="hover:text-[#ffdd00]" to="#about">À propos</NuxtLink>
-        <NuxtLink class="hover:text-[#ffdd00]" to="#projects">Projets</NuxtLink>
-        <NuxtLink class="hover:text-[#ffdd00]" to="#contact">Contact</NuxtLink>
         <a class="hover:text-[#ffdd00]" href="https://github.com/ricoRR" target="_blank" rel="noopener">
           GitHub
         </a>

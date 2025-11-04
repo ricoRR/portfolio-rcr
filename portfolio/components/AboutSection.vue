@@ -13,15 +13,27 @@
             réactives.
           </p>
           <p class="leading-relaxed text-gray-200">
-            Mon objectif est de rejoindre une équipe où je peux contribuer à la
-            conception, au développement et au déploiement d’applications web
-            modernes, tout en continuant d’apprendre auprès de développeurs
-            expérimentés.
+            Depuis 2025, je poursuis mon alternance chez Propulse by CA comme développeur
+            fullstack, où je conçois des API, automatise des migrations de données et
+            accompagne la mise en production d’un forum Discourse. Mon objectif est de
+            rejoindre une équipe où je peux contribuer à la conception, au développement
+            et au déploiement d’applications web modernes, tout en continuant d’apprendre
+            auprès de développeurs expérimentés.
           </p>
           <div class="grid gap-6 md:grid-cols-2">
             <div>
               <h3 class="mb-3 text-lg font-semibold text-white">Expériences</h3>
               <ul class="space-y-4 text-sm text-gray-300">
+                <li>
+                  <p class="font-semibold text-white">Développeur Fullstack · Propulse by CA · 2025</p>
+                  <ul class="mt-2 space-y-1 text-gray-300">
+                    <li>Conception d’une API REST de gestion de forum intégrée à l’API Discourse.</li>
+                    <li>Migrations de contenus MongoDB & DatoCMS vers AWS (Amplify, S3, Lambda).</li>
+                    <li>Mise en production d’un forum Discourse avec pipelines de tests (Jest, Mocha, Chai).</li>
+                    <li>Rédaction de tests unitaires, documentation et suivi des releases.</li>
+                    <li class="text-[#ffdd00]">Tech : Vue 3, Nuxt, TypeScript, SCSS, MongoDB, DatoCMS, AWS.</li>
+                  </ul>
+                </li>
                 <li>
                   <p class="font-semibold text-white">Gardiennage · 2022-2023</p>
                   <p>Accueil des résidents, gestion des colis, communication terrain.</p>
@@ -60,16 +72,17 @@
           <div class="rounded-2xl border border-[#ffdd00]/20 bg-[#161616] p-6">
             <h3 class="mb-4 text-lg font-semibold text-white">Compétences techniques</h3>
             <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-wide text-[#ffdd00]">
-              <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">PHP 8 · Symfony · Laravel</li>
-              <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">JavaScript ES6 · Node.js</li>
+              <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">PHP 8 (Laravel, Symfony)</li>
+              <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">JavaScript ES6 (Express)</li>
               <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">TypeScript</li>
+              <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">Node.js</li>
               <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">Vue 3 · Nuxt</li>
-              <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">React Native (Expo)</li>
               <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">Angular</li>
+              <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">React Native (Expo)</li>
               <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">HTML5 · CSS3 · SCSS</li>
-              <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">Tailwind · Bootstrap</li>
               <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">MySQL · MongoDB</li>
-              <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">Docker · Git · Bash</li>
+              <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">Ajax</li>
+              <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">Bash · Git</li>
             </ul>
           </div>
 

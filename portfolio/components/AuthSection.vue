@@ -12,6 +12,12 @@
         </div>
 
         <div class="md:w-1/2">
+          <div
+            v-if="redirectMessage"
+            class="mb-4 rounded-2xl border border-[#ffdd00]/30 bg-[#201f10] p-4 text-sm text-[#ffdd00]"
+          >
+            {{ redirectMessage }}
+          </div>
           <form v-if="!authState.isAuthenticated" class="space-y-4" @submit.prevent="login">
             <div class="flex flex-col">
               <label class="mb-2 text-xs uppercase tracking-[0.3em] text-[#ffdd00]/70" for="auth-email">Email</label>
@@ -88,16 +94,24 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue';
+import { computed, reactive, ref } from 'vue';
+import { useRoute, useRouter } from '#imports';
 import { useAuthState } from '~/composables/useAuthState';
 
 const authState = useAuthState();
+const route = useRoute();
+const router = useRouter();
 const credentials = reactive({
   email: '',
   password: '',
 });
 const loading = ref(false);
 const errorMessage = ref('');
+const redirectMessage = computed(() =>
+  route.query.auth === 'required'
+    ? 'Connexion requise pour consulter la documentation privée. Merci de saisir vos identifiants.'
+    : ''
+);
 
 async function login() {
   loading.value = true;
@@ -116,6 +130,19 @@ async function login() {
       authState.value.email = credentials.email;
       credentials.email = '';
       credentials.password = '';
+
+      const redirectTarget =
+        typeof route.query.redirectedFrom === 'string' ? route.query.redirectedFrom : null;
+
+      const cleanedQuery = { ...route.query };
+      cleanedQuery.auth = undefined;
+      cleanedQuery.redirectedFrom = undefined;
+
+      if (redirectTarget) {
+        await router.push(redirectTarget);
+      } else if (route.query.auth || route.query.redirectedFrom) {
+        await router.replace({ query: cleanedQuery });
+      }
     }
   } catch (error: any) {
     const message =

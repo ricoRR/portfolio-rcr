@@ -84,3 +84,9 @@
     </div>
   </div>
 </template>
+
+<script setup>
+definePageMeta({
+  middleware: ['docs-guard'],
+});
+</script>

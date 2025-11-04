@@ -11,12 +11,12 @@
         <NuxtLink class="transition hover:text-[#ffdd00]" to="#gallery">Galerie</NuxtLink>
         <NuxtLink class="transition hover:text-[#ffdd00]" to="#contact">Contact</NuxtLink>
       </nav>
-      <a
+      <NuxtLink
         class="rounded-full border border-[#ffdd00] px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#ffdd00] transition hover:bg-[#ffdd00]/10"
-        href="mailto:ricardo.chaves-rodrigues@epitech.eu"
+        to="#contact"
       >
-        Email
-      </a>
+        Contact
+      </NuxtLink>
     </div>
   </header>
 </template>

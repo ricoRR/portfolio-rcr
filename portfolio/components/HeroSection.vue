@@ -46,6 +46,13 @@
           >
             Découvrir mes projets
           </NuxtLink>
+          <a
+            class="rounded-full border border-[#ffdd00] px-5 py-2 font-semibold text-[#ffdd00] transition hover:bg-[#ffdd00]/10"
+            href="/CDI_CV_Ricardo_Chaves_Rodrigues.pdf"
+            download
+          >
+            Télécharger mon CV
+          </a>
           <NuxtLink
             class="rounded-full border border-[#ffdd00] px-5 py-2 font-semibold text-[#ffdd00] transition hover:bg-[#ffdd00]/10"
             to="#contact"
@@ -63,12 +70,8 @@
             class="h-full w-full rounded-3xl object-cover shadow-[0_0_60px_rgba(255,221,0,0.25)]"
           />
           <div class="absolute -left-6 -top-6 hidden h-24 w-24 rotate-6 items-center justify-center rounded-2xl border border-[#ffdd00]/30 bg-[#ffdd00]/10 text-xs font-semibold uppercase tracking-[0.2em] text-[#ffdd00] md:flex">
-            Alternance
-            <span class="block text-base">3/1</span>
           </div>
-          <div class="absolute -bottom-6 -right-6 hidden w-40 rounded-2xl border border-[#ffdd00]/30 bg-[#ffdd00]/10 p-4 text-xs text-gray-200 md:block">
-            <p class="font-semibold text-[#ffdd00]">Web@cademie 2023-2025</p>
-            <p>RNCP 5 Développeur Web</p>
+          <div class="absolute -bottom-6 -right-6 hidden h-24 w-40 -rotate-6 rounded-2xl border border-[#ffdd00]/30 bg-[#ffdd00]/10 p-4 text-xs text-gray-200 md:block">
           </div>
         </div>
       </div>

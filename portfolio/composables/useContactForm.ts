@@ -57,7 +57,8 @@ function resolveMessage(
 
 export function useContactForm() {
   const config = useRuntimeConfig();
-  const endpoint = config.public.contactFormEndpoint;
+  const publicEndpoint = config.public.contactFormEndpoint;
+  const endpoint = publicEndpoint || '/api/contact';
   const defaultSuccess =
     config.public.contactFormSuccessMessage ??
     'Message envoyé. Merci pour votre confiance, je vous réponds rapidement.';
@@ -67,12 +68,6 @@ export function useContactForm() {
 
   async function submitContactRequest(payload: ContactFormInput): Promise<string> {
     const sanitizedPayload = sanitizePayload(payload);
-
-    if (!endpoint) {
-      throw new Error(
-        'Le formulaire de contact n’est pas configuré. Ajoutez `NUXT_PUBLIC_CONTACT_FORM_ENDPOINT` avant de déployer.'
-      );
-    }
 
     const response = await fetch(endpoint, {
       method: 'POST',
@@ -93,6 +88,12 @@ export function useContactForm() {
     }
 
     if (!response.ok) {
+      if (!publicEndpoint && response.status === 404) {
+        throw new Error(
+          'Le traitement du formulaire nécessite un hébergement avec API (Nuxt server ou endpoint externe).'
+        );
+      }
+
       throw new Error(resolveMessage(parsedBody, defaultError));
     }
 
