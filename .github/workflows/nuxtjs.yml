@@ -75,13 +75,15 @@ jobs:
           fi
 
       - name: Static HTML export with Nuxt
+        env:
+          DEPLOY_TARGET: github-pages
         run: |
           if [ "${{ steps.detect-package-manager.outputs.manager }}" = "pnpm" ]; then
             pnpm run generate
           elif [ "${{ steps.detect-package-manager.outputs.manager }}" = "yarn" ]; then
             yarn run generate
           else
-            npm run generate
+            npm run generate:gh
           fi
 
       - name: Upload artifact
