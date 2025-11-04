@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite";
 
+const isGithubPages = process.env.DEPLOY_TARGET === 'github-pages';
+
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
@@ -10,6 +12,14 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+  },
+
+  app: {
+    baseURL: isGithubPages ? '/portfolio-rcr/' : '/',
+  },
+
+  nitro: {
+    preset: isGithubPages ? 'github-pages' : undefined,
   },
 
   runtimeConfig: {

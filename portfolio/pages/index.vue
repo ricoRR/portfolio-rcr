@@ -19,8 +19,8 @@ useSeoMeta({
   ogDescription:
     'Découvrez les projets, compétences et analyses RNCP de Ricardo Chaves Rodrigues, développeur web fullstack en alternance.',
   ogType: 'website',
-  ogUrl: 'https://ricardo-portfolio.example.com',
-  ogImage: '/images/hero-portrait.jpg',
+  ogUrl: 'https://ricorr.github.io/portfolio-rcr/',
+  ogImage: 'https://ricorr.github.io/portfolio-rcr/images/hero-portrait.jpg',
   twitterCard: 'summary_large_image',
 });
 </script>
