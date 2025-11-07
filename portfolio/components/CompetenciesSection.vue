@@ -8,7 +8,7 @@
         </h2>
         <p class="text-sm text-gray-300">
           Chaque bloc de compétences RNCP est relié à des projets livrés ou à des missions en
-          alternance. Les preuves citées sont disponibles sur demande dans l’espace partenaire.
+          alternance.
         </p>
       </div>
 
@@ -75,98 +75,98 @@ type CompetencyBloc = {
 
 const competencyMatrix: CompetencyBloc[] = [
   {
-    code: 'Bloc 1',
-    title: 'Développer des interfaces utilisateur modernes',
-    validation: 'Validé via TopHardware & Propulse by CA',
+    code: "",
+    title: "Développer des interfaces utilisateur modernes",
+    validation: "Validé via TopHardware & Propulse by CA",
     competencies: [
-      'Concevoir des maquettes fonctionnelles et UI responsive.',
-      'Implémenter des interfaces web accessibles en Vue/Nuxt et React.',
-      'Intégrer des parcours utilisateurs avec gestion d’état et tests UI.',
+      "Concevoir des maquettes fonctionnelles et UI responsive.",
+      "Implémenter des interfaces web accessibles en Vue/Nuxt et React.",
+      "Intégrer des parcours utilisateurs avec gestion d'état et tests UI.",
     ],
     evidences: [
       {
-        title: 'TopHardware – Front e-commerce',
-        context: 'Projet d’équipe · 2024',
+        title: "TopHardware - Front e-commerce",
+        context: "Projet d'équipe · 2024",
         details:
-          'Création des écrans catalogue et tunnel de paiement Stripe en Next.js, animation des composants et audit Lighthouse (score ≥ 90).',
+          "Création des écrans catalogue et tunnel de paiement Stripe en Next.js, animation des composants et audit Lighthouse (score ≥ 90).",
       },
       {
-        title: 'Propulse by CA – Dashboard Discourse',
-        context: 'Alternance · 2025',
+        title: "Propulse by CA - Dashboard Discourse",
+        context: "Alternance · 2025",
         details:
-          'Développement des écrans admin Vue 3 / Nuxt avec design system interne, dark mode et scénarios Jest/Mocha.',
+          "Développement des écrans admin Vue 3 / Nuxt avec design system interne, dark mode et scénarios Jest/Mocha.",
       },
     ],
   },
   {
-    code: 'Bloc 2',
-    title: 'Développer des API et des services back-end',
-    validation: 'Validé via Propulse by CA & TopHardware',
+    code: "",
+    title: "Développer des API et des services back-end",
+    validation: "Validé via Propulse by CA & TopHardware",
     competencies: [
-      'Modéliser des données relationnelles / NoSQL et sécuriser les accès.',
-      'Développer des API REST documentées (Swagger, Postman).',
-      'Automatiser les tests unitaires et d’intégration (Jest, Mocha, Chai).',
+      "Modéliser des données relationnelles / NoSQL et sécuriser les accès.",
+      "Développer des API REST documentées (Swagger, Postman).",
+      "Automatiser les tests unitaires et d'intégration (Jest, Mocha, Chai).",
     ],
     evidences: [
       {
-        title: 'Propulse by CA – API Forum',
-        context: 'Alternance · 2025',
+        title: "Propulse by CA - API Forum",
+        context: "Alternance · 2025",
         details:
-          'Spécification et développement d’une API REST orchestrant Discourse, avec scripts de migration MongoDB ↔ DatoCMS et déploiement AWS Lambda.',
+          "Spécification et développement d'une API REST orchestrant Discourse, avec scripts de migration MongoDB ↔ DatoCMS et déploiement AWS Lambda.",
       },
       {
-        title: 'TopHardware – API Symfony',
-        context: 'Projet d’équipe · 2024',
+        title: "TopHardware - API Symfony",
+        context: "Projet d'équipe · 2024",
         details:
-          'Création d’une API Symfony sécurisée (JWT + OAuth 2.0) pour gérer catalogue, commandes et notifications Stripe.',
+          "Création d'une API Symfony sécurisée (JWT + OAuth 2.0) pour gérer catalogue, commandes et notifications Stripe.",
       },
     ],
   },
   {
-    code: 'Bloc 3',
-    title: 'Déployer, maintenir et améliorer une application',
-    validation: 'Validé via Propulse by CA & projets académiques',
+    code: "",
+    title: "Déployer, maintenir et améliorer une application",
+    validation: "Validé via Propulse by CA & projets académiques",
     competencies: [
-      'Automatiser le déploiement et surveiller la qualité de service.',
-      'Rédiger la documentation et capitaliser les retours utilisateurs.',
-      'Planifier et exécuter des tests QA (unitaires, e2e, accessibilité).',
+      "Automatiser le déploiement et surveiller la qualité de service.",
+      "Rédiger la documentation et capitaliser les retours utilisateurs.",
+      "Planifier et exécuter des tests QA (unitaires, e2e, accessibilité).",
     ],
     evidences: [
       {
-        title: 'Propulse by CA – Mise en production',
-        context: 'Alternance · 2025',
+        title: "Propulse by CA - Mise en production",
+        context: "Alternance · 2025",
         details:
-          'Participation à la mise en production d’un forum Discourse (Amplify, S3), gestion des releases et rédaction des runbooks.',
+          "Participation à la mise en production d'un forum Discourse (Amplify, S3), gestion des releases et rédaction des runbooks.",
       },
       {
-        title: 'Portfolio – Plan de tests & monitoring',
-        context: 'Projet individuel · 2025',
+        title: "Portfolio - Plan de tests & monitoring",
+        context: "Projet individuel · 2025",
         details:
-          'Plan QA documenté (docs/test-plan), mise en place des métriques Lighthouse, sauvegarde des messages via API Node + SQLite.',
+          "Plan QA documenté (docs/test-plan), mise en place des métriques Lighthouse, sauvegarde des messages via API Node + SQLite.",
       },
     ],
   },
   {
-    code: 'Bloc 4',
-    title: 'Piloter son apprentissage et collaborer',
-    validation: 'Validé via alternance & travaux académiques',
+    code: "",
+    title: "Piloter son apprentissage et collaborer",
+    validation: "Validé via alternance & travaux académiques",
     competencies: [
-      'Analyser sa progression et formaliser un plan d’amélioration.',
-      'Collaborer en équipe agile (Trello, code reviews, communication).',
-      'Partager les connaissances via documentation et présentations.',
+      "Analyser sa progression et formaliser un plan d'amélioration.",
+      "Collaborer en équipe agile (Trello, code reviews, communication).",
+      "Partager les connaissances via documentation et présentations.",
     ],
     evidences: [
       {
-        title: 'Portfolio – Analyse réflexive',
-        context: 'Projet individuel · 2025',
+        title: "Portfolio - Analyse réflexive",
+        context: "Projet individuel · 2025",
         details:
-          'Production des documents d’analyse (docs/improvements, docs/qa-monitoring) et suivi des objectifs ICE.',
+          "Production des documents d'analyse (docs/improvements, docs/qa-monitoring) et suivi des objectifs ICE.",
       },
       {
-        title: 'Propulse by CA – Collaboration',
-        context: 'Alternance · 2025',
+        title: "Propulse by CA - Collaboration",
+        context: "Alternance · 2025",
         details:
-          'Participation aux rituels Scrum, rédaction de CR Trello, animation de démonstrations produit hebdomadaires.',
+          "Participation aux rituels Scrum, rédaction de CR Trello, animation de démonstrations produit hebdomadaires.",
       },
     ],
   },

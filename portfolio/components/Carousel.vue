@@ -6,7 +6,7 @@
           <h2 class="text-2xl font-semibold text-[#ffdd00]">Captures de projets</h2>
           <p class="text-sm text-gray-300">
             Une vue rapide des interfaces livrées sur mes projets phares. Cliquez
-            sur une capture pour l’ouvrir en plein écran et consulter les
+            sur une capture pour l'ouvrir en plein écran et consulter les
             informations associées.
           </p>
           <div class="flex items-center gap-4 text-sm text-gray-300">
@@ -116,34 +116,37 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
+import betChessImg from '@/assets/betChess.png';
+import spaceShooterImg from '@/assets/spaceShooter.png';
+import puissance4Img from '@/assets/puissance4.png';
 
 const carouselItems = [
   {
-    src: 'images/gallery-top-hardware.png',
-    alt: 'Interface du projet TopHardware',
-    title: 'TopHardware',
-    context: 'E-commerce complet',
+    src: betChessImg,
+    alt: 'Interface du projet BetChess',
+    title: 'BetChess',
+    context: 'Plateforme de paris',
     description:
-      "Création d’un site d’e-commerce avec paiement Stripe et back-office Symfony. La capture illustre le catalogue produit responsive.",
-    stack: ['Next.js', 'TypeScript', 'Stripe', 'Symfony', 'MySQL'],
+      "Plateforme de pari sur des matchs d'échecs.",
+    stack: ['Nuxt 3', 'TypeScript', 'Tailwind'],
   },
   {
-    src: 'images/gallery-myquizz.png',
-    alt: 'Interface du jeu MyQuizz',
-    title: 'MyQuizz',
-    context: 'Application web & API',
+    src: spaceShooterImg,
+    alt: 'Capture du SpaceShooter',
+    title: 'SpaceShooter',
+    context: 'Arcade Phaser.io',
     description:
-      "Jeu de culture générale avec leaderboard et back office Tailwind. La capture montre l’écran quiz administrable.",
-    stack: ['Symfony', 'Tailwind', 'MySQL'],
+      "Jeu d'arcade spatial développé avec Phaser.io : gestion des vagues ennemies, collisions et power-ups.",
+    stack: ['Phaser', 'JavaScript', 'Canvas API'],
   },
   {
-    src: 'images/gallery-puissance4.jpg',
-    alt: 'Prototype Puissance 4',
+    src: puissance4Img,
+    alt: 'Plugin Puissance 4',
     title: 'Puissance 4',
-    context: 'Prototype solo',
+    context: 'Plugin multijoueur',
     description:
-      "Jeu modulaire orienté objet en JavaScript pur. L’interface responsive est pensée pour desktop et mobile.",
-    stack: ['HTML', 'CSS', 'JavaScript'],
+      "Plugin de jeu Puissance 4, mode duel local. L'accent est mis sur les animations.",
+    stack: ['Vue 3', 'TypeScript', 'SCSS'],
   },
 ];
 

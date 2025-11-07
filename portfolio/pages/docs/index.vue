@@ -5,8 +5,8 @@
         <p class="text-xs uppercase tracking-[0.4em] text-[#ffdd00]/60">Documentation</p>
         <h1 class="text-3xl font-semibold text-[#ffdd00]">Centre de documentation</h1>
         <p class="text-sm text-gray-300">
-          Retrouvez ici l’ensemble des documents produits autour du projet :
-          cadrage, plan de tests, guide utilisateur et pistes d’amélioration.
+          Retrouvez ici l'ensemble des documents produits autour du projet :
+          cadrage, plan de tests, guide utilisateur et pistes d'amélioration.
         </p>
       </header>
       <ul class="space-y-3 text-sm">
@@ -34,9 +34,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-definePageMeta({
-  middleware: ['docs-guard'],
-});
-</script>

@@ -5,33 +5,34 @@
         <div class="space-y-6">
           <h2 class="text-2xl font-semibold text-[#ffdd00]">À propos</h2>
           <p class="leading-relaxed text-gray-200">
-            Je suis passionné par la création de solutions web robustes et
-            intuitives. Après plusieurs expériences centrées sur la rigueur et
-            le service, j’ai choisi de mettre cette exigence au cœur de mes
-            projets numériques. J’aime particulièrement travailler sur des
-            architectures complètes comprenant API, base de données et interfaces
-            réactives.
+            Je conçois des solutions web robustes et simples à 
+            prendre en main. Mon fil rouge: la rigueur et le sens 
+            du service, que j'applique aussi bien à l'architecture 
+            qu'au soin des interfaces. J'aime travailler sur des 
+            stacks complètes conçoit des API, base de données, UI réactive et
+             voir une idée passer du brouillon à la prod.
           </p>
           <p class="leading-relaxed text-gray-200">
-            Depuis 2025, je poursuis mon alternance chez Propulse by CA comme développeur
-            fullstack, où je conçois des API, automatise des migrations de données et
-            accompagne la mise en production d’un forum Discourse. Mon objectif est de
-            rejoindre une équipe où je peux contribuer à la conception, au développement
-            et au déploiement d’applications web modernes, tout en continuant d’apprendre
-            auprès de développeurs expérimentés.
+            Depuis 2025, je suis en alternance chez Propulse 
+            by CA comme développeur full-stack. J'y conçois des API, 
+            j'automatise des migrations de données et je participe 
+            aux mises en production. Je cherche à rejoindre une équipe 
+            où je pourrai contribuer à la conception, au développement 
+            et au déploiement d'applications web modernes, tout en 
+            continuant à progresser aux côtés de développeurs expérimentés.
           </p>
           <div class="grid gap-6 md:grid-cols-2">
             <div>
-              <h3 class="mb-3 text-lg font-semibold text-white">Expériences</h3>
+              <h3 class="mb-3 text-lg font-semibold text-[#ffdd00]">Expériences</h3>
               <ul class="space-y-4 text-sm text-gray-300">
                 <li>
                   <p class="font-semibold text-white">Développeur Fullstack · Propulse by CA · 2025</p>
                   <ul class="mt-2 space-y-1 text-gray-300">
-                    <li>Conception d’une API REST de gestion de forum intégrée à l’API Discourse.</li>
+                    <li>Conception d'une API REST de gestion de forum intégrée à l'API Discourse.</li>
                     <li>Migrations de contenus MongoDB & DatoCMS vers AWS (Amplify, S3, Lambda).</li>
-                    <li>Mise en production d’un forum Discourse avec pipelines de tests (Jest, Mocha, Chai).</li>
+                    <li>Mise en production d'un forum Discourse avec pipelines de tests (Jest, Mocha, Chai).</li>
                     <li>Rédaction de tests unitaires, documentation et suivi des releases.</li>
-                    <li class="text-[#ffdd00]">Tech : Vue 3, Nuxt, TypeScript, SCSS, MongoDB, DatoCMS, AWS.</li>
+                    <li class="italic text-[#ffdd00]/90">Tech : Vue 3, Nuxt, TypeScript, SCSS, MongoDB, DatoCMS, AWS.</li>
                   </ul>
                 </li>
                 <li>
@@ -45,7 +46,7 @@
               </ul>
             </div>
             <div>
-              <h3 class="mb-3 text-lg font-semibold text-white">Formation & Diplômes</h3>
+              <h3 class="mb-3 text-lg font-semibold text-[#ffdd00]">Formation & Diplômes</h3>
               <ul class="space-y-4 text-sm text-gray-300">
                 <li>
                   <p class="font-semibold text-white">Web@cademie by Epitech</p>
@@ -53,7 +54,7 @@
                 </li>
                 <li>
                   <p class="font-semibold text-white">Titre RNCP 5 Développeur Web</p>
-                  <p>Certification en cours d’obtention</p>
+                  <p>Certification en cours d'obtention</p>
                 </li>
                 <li>
                   <p class="font-semibold text-white">Permis B</p>
@@ -81,7 +82,7 @@
               <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">React Native (Expo)</li>
               <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">HTML5 · CSS3 · SCSS</li>
               <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">MySQL · MongoDB</li>
-              <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">Ajax</li>
+              <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">Docker</li>
               <li class="rounded-full bg-[#ffdd00]/10 px-3 py-1">Bash · Git</li>
             </ul>
           </div>
@@ -111,10 +112,10 @@
         <p class="text-sm leading-relaxed text-gray-200">
           Je travaille avec des méthodes agiles pour livrer des fonctionnalités
           testées et documentées. Mon expérience terrain me permet de garder un
-          contact direct avec les utilisateurs finaux et d’intégrer leurs retours
-          dans l’évolution du produit. Je suis à l’aise avec les outils de
+          contact direct avec les utilisateurs finaux et d'intégrer leurs retours
+          dans l'évolution du produit. Je suis à l'aise avec les outils de
           versionnage (Git/GitHub), la collaboration asynchrone et la
-          communication d’équipe.
+          communication d'équipe.
         </p>
       </div>
     </div>

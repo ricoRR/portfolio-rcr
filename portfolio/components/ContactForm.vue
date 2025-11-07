@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-3xl">
       <h2 class="text-2xl font-semibold text-[#ffdd00]">Me contacter</h2>
       <p class="mt-2 text-sm text-gray-300">
-        Une idée de projet, une question ou l’envie d’échanger sur une
+        Une idée de projet, une question ou l'envie d'échanger sur une
         opportunité ? Laissez-moi un message, je vous réponds rapidement.
       </p>
       <form class="mt-8 flex flex-col gap-4" @submit.prevent="submitForm">

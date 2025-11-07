@@ -10,9 +10,9 @@
       <section class="space-y-3">
         <h2 class="text-xl font-semibold text-white">1. Objectifs QA</h2>
         <ul class="list-disc space-y-2 pl-6 text-sm">
-          <li>Assurer le fonctionnement des fonctionnalités clés (contact, authentification, navigation).</li>
+          <li>Assurer le fonctionnement des fonctionnalités clés (contact, navigation, UI interactive).</li>
           <li>Vérifier la compatibilité sur les principaux navigateurs desktop et mobile.</li>
-          <li>Contrôler les exigences d’accessibilité de base (contrastes, navigation clavier, alternatives).</li>
+          <li>Contrôler les exigences d'accessibilité de base (contrastes, navigation clavier, alternatives).</li>
         </ul>
       </section>
 
@@ -23,24 +23,16 @@
             <h3 class="font-semibold text-[#ffdd00]">Formulaire de contact</h3>
             <ul class="list-disc space-y-1 pl-5 text-gray-300">
               <li>TC01 — Soumission valide affiche un message de succès et vide les champs.</li>
-              <li>TC02 — Email invalide bloque l’envoi (validation HTML).</li>
-              <li>TC03 — Simulation d’erreur serveur renvoie un message d’échec.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-semibold text-[#ffdd00]">Authentification</h3>
-            <ul class="list-disc space-y-1 pl-5 text-gray-300">
-              <li>TC10 — Identifiants valides donnent accès aux docs.</li>
-              <li>TC11 — Identifiants invalides renvoient un message d’erreur.</li>
-              <li>TC12 — Bouton “Se déconnecter” purge la session locale.</li>
+              <li>TC02 — Email invalide bloque l'envoi (validation HTML).</li>
+              <li>TC03 — Simulation d'erreur serveur renvoie un message d'échec.</li>
             </ul>
           </div>
           <div>
             <h3 class="font-semibold text-[#ffdd00]">Navigation & UI</h3>
             <ul class="list-disc space-y-1 pl-5 text-gray-300">
               <li>TC20 — Les ancres du header scrollent vers les sections.</li>
-              <li>TC21 — Le carousel passe correctement d’un item à l’autre.</li>
-              <li>TC22 — Le modal galerie s’ouvre/ferme au clic et à la touche ESC.</li>
+              <li>TC21 — Le carousel passe correctement d'un item à l'autre.</li>
+              <li>TC22 — Le modal galerie s'ouvre/ferme au clic et à la touche ESC.</li>
             </ul>
           </div>
         </div>
@@ -51,7 +43,7 @@
         <p class="text-sm text-gray-300">
           Les tests manuels sont priorisés pour cette version. Un socle de tests
           automatisés (Vitest + Testing Library) est planifié pour les composants
-          interactifs (carousel, modal, authentification). Les exécutions seront
+          interactifs (carousel, modal, formulaire de contact). Les exécutions seront
           documentées dans un journal de tests (<code>docs/test-report.md</code>).
         </p>
       </section>
@@ -59,7 +51,7 @@
       <section class="space-y-3">
         <h2 class="text-xl font-semibold text-white">4. Outils</h2>
         <ul class="list-disc space-y-2 pl-6 text-sm">
-          <li>Check-list accessibilité avec l’extension Lighthouse (Chrome).</li>
+          <li>Check-list accessibilité avec l'extension Lighthouse (Chrome).</li>
           <li>Tests manuels sur Chrome, Firefox, Edge et Safari mobile.</li>
           <li>Suivi des anomalies via un tableau Trello “QA”.</li>
         </ul>
@@ -67,9 +59,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-definePageMeta({
-  middleware: ['docs-guard'],
-});
-</script>

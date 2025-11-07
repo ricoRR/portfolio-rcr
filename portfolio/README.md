@@ -1,6 +1,6 @@
 # Portfolio – Ricardo Chaves Rodrigues
 
-Portfolio Nuxt 3 présentant mon profil de développeur web fullstack en alternance. Le site regroupe les sections principales (À propos, projets, galerie, contact) ainsi qu’un espace partenaire protégé donnant accès à la documentation complète du projet.
+Portfolio Nuxt 3 présentant mon profil de développeur web fullstack en alternance. Le site regroupe les sections principales (À propos, projets, galerie, contact) et renvoie vers la documentation détaillée du projet.
 
 ## Fonctionnalités
 - Hero section avec informations clés et CTA.
@@ -8,32 +8,27 @@ Portfolio Nuxt 3 présentant mon profil de développeur web fullstack en alterna
 - Carousel "Points forts" et galerie modale.
 - Liste de projets avec stack et rôle.
 - Formulaire de contact compatible GitHub Pages via un endpoint externe configurable (Formspree, EmailJS, etc.).
-- Authentification durcie (validation de format, mot de passe fort, verrouillage) pour accéder aux documents.
 - Documentation accessible sous `/docs/*`.
 
 ## Démarrage
 ```bash
 npm install
-cp .env.example .env  # puis renseigner l’endpoint du formulaire + identifiants auth/SMTP si besoin
+cp .env.example .env  # puis renseigner l'endpoint du formulaire et, si besoin, le SMTP
 npm run dev
 ```
 
-### Variables d’environnement
+### Variables d'environnement
 | Clé | Description |
 |-----|-------------|
 | `NUXT_PUBLIC_CONTACT_FORM_ENDPOINT` | URL du service de formulaires (Formspree, etc.). Obligatoire pour GitHub Pages. |
 | `NUXT_PUBLIC_CONTACT_FORM_SUCCESS_MESSAGE` | Message de confirmation personnalisé (optionnel). |
-| `NUXT_PUBLIC_CONTACT_FORM_ERROR_MESSAGE` | Message d’erreur personnalisé (optionnel). |
+| `NUXT_PUBLIC_CONTACT_FORM_ERROR_MESSAGE` | Message d'erreur personnalisé (optionnel). |
 | `MAIL_HOST` | (Optionnel) Hôte SMTP pour la route `/api/contact` en déploiement Node. |
 | `MAIL_PORT` | (Optionnel) Port SMTP. |
 | `MAIL_USER` | (Optionnel) Identifiant SMTP. |
 | `MAIL_PASS` | (Optionnel) Mot de passe SMTP. |
 | `MAIL_RECIPIENT` | (Optionnel) Destinataire des messages (défaut : `MAIL_USER`). |
-| `AUTH_EMAIL` | Email autorisé pour l’espace partenaire |
-| `AUTH_PASSWORD` | Mot de passe associé |
-| `AUTH_MAX_ATTEMPTS` | Nombre d’essais avant blocage (optionnel) |
-| `AUTH_LOCK_MINUTES` | Durée du blocage en minutes (optionnel) |
-
+ 
 ## Scripts
 - `npm run dev` : serveur de développement (http://localhost:3000).
 - `npm run build` : build de production.
@@ -42,12 +37,12 @@ npm run dev
 
 ## Structure
 ```
-components/      # Sections du site (Hero, About, Projects, Gallery, Auth, Contact)
+components/      # Sections du site (Hero, About, Projects, Gallery, Contact)
 pages/           # Routes (homepage + documentation)
-server/api/      # API auth et (optionnel) contact via SMTP pour hébergement Node
-server/services/ # Logique métier (authentification, contact serveur)
+server/api/      # API contact via SMTP pour hébergement Node
+server/services/ # Logique métier du formulaire de contact
 server/utils/    # Initialisation de la base SQLite (uniquement si API contact côté serveur)
-composables/     # Gestion de l’état d’authentification et formulaire de contact
+composables/     # Hooks partageables (contact, etc.)
 public/          # Assets statiques (maquette SVG, images)
 docs/            # Documentation projet
 data/            # Base SQLite (messages de contact, pour déploiement Node)
@@ -58,7 +53,7 @@ Dockerfile       # Industrialisation via conteneur
 - `/docs/project-presentation` : maquette & choix techniques
 - `/docs/test-plan` : stratégie de tests
 - `/docs/user-guide` : guide utilisateur
-- `/docs/improvements` : pistes d’amélioration et analyse QA
+- `/docs/improvements` : pistes d'amélioration et analyse QA
 - `docs/deployment-guide.md` : procédures Render & Docker
 - `docs/deployment-report.md` : journal des builds/tests exécutés
 

@@ -28,10 +28,6 @@ export default defineNuxtConfig({
     mailUser: process.env.MAIL_USER,
     mailPass: process.env.MAIL_PASS,
     mailRecipient: process.env.MAIL_RECIPIENT || process.env.MAIL_USER,
-    authEmail: process.env.AUTH_EMAIL,
-    authPassword: process.env.AUTH_PASSWORD,
-    authMaxAttempts: process.env.AUTH_MAX_ATTEMPTS,
-    authLockMinutes: process.env.AUTH_LOCK_MINUTES,
 
     public: {
       siteName: 'Portfolio',

@@ -13,8 +13,8 @@
         </h1>
         <p class="max-w-xl text-base leading-relaxed text-gray-200">
           Étudiant à la Web@cademie by Epitech, je conçois des solutions web
-          modernes en combinant front-end réactif et back-end robuste. J’aime
-          transformer des besoins métiers en expériences numériques accessibles
+          modernes en combinant front-end réactif et back-end robuste. J'aime
+          transformer des besoins métiers en expériences accessibles
           et performantes.
         </p>
         <ul class="flex flex-wrap gap-4 text-sm text-gray-300">

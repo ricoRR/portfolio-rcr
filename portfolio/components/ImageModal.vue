@@ -5,7 +5,7 @@
         <div>
           <h2 class="text-2xl font-semibold text-[#ffdd00]">Captures de projets</h2>
           <p class="mt-2 max-w-xl text-sm text-gray-300">
-            Quelques visuels illustrant l’interface des projets les plus récents.
+            Quelques visuels illustrant l'interface des projets les plus récents.
             Cliquez pour agrandir.
           </p>
         </div>

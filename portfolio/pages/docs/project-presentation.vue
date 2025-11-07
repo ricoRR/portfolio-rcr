@@ -9,7 +9,7 @@
           Présentation & maquette de la solution web
         </h1>
         <p class="text-sm text-gray-300">
-          Synthèse des choix techniques, de l’architecture cible et du parcours
+          Synthèse des choix techniques, de l'architecture cible et du parcours
           utilisateur retenu pour le portfolio professionnel de Ricardo Chaves
           Rodrigues.
         </p>
@@ -21,15 +21,15 @@
           <li>Présenter un profil de développeur fullstack en alternance.</li>
           <li>Centraliser les réalisations (projets, compétences, expériences).</li>
           <li>Proposer un canal de contact fiable avec suivi par email.</li>
-          <li>Fournir un espace sécurisé pour partager la documentation détaillée.</li>
+          <li>Index de documentation projet accessible directement en ligne.</li>
         </ul>
       </section>
 
       <section class="space-y-3">
         <h2 class="text-xl font-semibold text-white">2. Public cible</h2>
         <p class="text-sm text-gray-300">
-          Responsables techniques et recruteurs en recherche d’alternants capables
-          d’intervenir sur le front-end et le back-end d’une application web, avec
+          Responsables techniques et recruteurs en recherche d'alternants capables
+          d'intervenir sur le front-end et le back-end d'une application web, avec
           une sensibilité à la qualité logicielle et au déploiement.
         </p>
       </section>
@@ -37,10 +37,10 @@
       <section class="space-y-3">
         <h2 class="text-xl font-semibold text-white">3. Architecture fonctionnelle</h2>
         <ul class="list-disc space-y-2 pl-6 text-sm">
-          <li>Accueil structuré autour d’un hero, d’un aperçu du parcours et d’un call-to-action.</li>
-          <li>Sections dédiées : À propos, Points forts, Projets, Galerie, Authentification, Contact.</li>
+          <li>Accueil structuré autour d'un hero, d'un aperçu du parcours et d'un call-to-action.</li>
+          <li>Sections dédiées : À propos, Points forts, Projets, Galerie, Documentation, Contact.</li>
           <li>Formulaire de contact branché sur un service externe (Formspree, EmailJS, etc.).</li>
-          <li>API Node/Nuxt pour l’authentification et, en option, la gestion serveur du formulaire.</li>
+          <li>API Node/Nuxt disponible uniquement pour la gestion serveur du formulaire (hébergement Node).</li>
         </ul>
       </section>
 
@@ -64,10 +64,10 @@
       <section class="space-y-3">
         <h2 class="text-xl font-semibold text-white">5. Schéma technique</h2>
         <ul class="list-disc space-y-2 pl-6 text-sm">
-          <li>Nuxt 3 (Vue 3) pour le rendu côté client et l’hébergement des API Nitro.</li>
+          <li>Nuxt 3 (Vue 3) pour le rendu côté client et l'hébergement des API Nitro.</li>
           <li>Tailwind CSS 4 (plugin Vite) pour le design system.</li>
-          <li>`useContactForm` pilote l’appel au service externe (configuré via `NUXT_PUBLIC_CONTACT_FORM_ENDPOINT`).</li>
-          <li>Runtime Config gère les secrets (authentification) et les variables publiques (`NUXT_PUBLIC_*`).</li>
+          <li>`useContactForm` pilote l'appel au service externe (configuré via `NUXT_PUBLIC_CONTACT_FORM_ENDPOINT`).</li>
+          <li>Runtime Config gère les secrets SMTP (`MAIL_*`) et les variables publiques (`NUXT_PUBLIC_*`).</li>
           <li>Déploiements cibles : GitHub Pages (statique) ou hébergement Node (Render, Railway, VPS) pour activer Nitro.</li>
         </ul>
       </section>
@@ -84,9 +84,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-definePageMeta({
-  middleware: ['docs-guard'],
-});
-</script>

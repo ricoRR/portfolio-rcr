@@ -2,10 +2,9 @@
   <div class="min-h-screen bg-[#0a0a0a] text-white">
     <HeroSection />
     <AboutSection />
-    <Carousel />
     <CompetenciesSection />
+    <Carousel />
     <ProjectsList />
-    <AuthSection />
     <ContactForm />
   </div>
 </template>
