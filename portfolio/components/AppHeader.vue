@@ -9,7 +9,6 @@
         <NuxtLink class="transition hover:text-[#ffdd00]" :to="{ path: '/', hash: '#projects' }">Projets</NuxtLink>
         <NuxtLink class="transition hover:text-[#ffdd00]" :to="{ path: '/', hash: '#highlights' }">Points forts</NuxtLink>
         <NuxtLink class="transition hover:text-[#ffdd00]" to="/docs">Docs</NuxtLink>
-        <NuxtLink class="transition hover:text-[#ffdd00]" :to="{ path: '/', hash: '#contact' }">Contact</NuxtLink>
       </nav>
       <NuxtLink
         class="rounded-full border border-[#ffdd00] px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#ffdd00] transition hover:bg-[#ffdd00]/10"
