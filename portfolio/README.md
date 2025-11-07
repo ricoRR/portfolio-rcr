@@ -28,6 +28,7 @@ npm run dev
 | `MAIL_USER` | (Optionnel) Identifiant SMTP. |
 | `MAIL_PASS` | (Optionnel) Mot de passe SMTP. |
 | `MAIL_RECIPIENT` | (Optionnel) Destinataire des messages (défaut : `MAIL_USER`). |
+| `NUXT_DATA_DIR` | (Optionnel) Dossier d'écriture pour la base SQLite (`/tmp/portfolio-data` conseillé sur Vercel). |
  
 ## Scripts
 - `npm run dev` : serveur de développement (http://localhost:3000).

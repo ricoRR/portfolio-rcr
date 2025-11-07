@@ -30,15 +30,15 @@
       </section>
 
       <section class="space-y-3">
-        <h2 class="text-xl font-semibold text-white">3. Accès documentations</h2>
+        <h2 class="text-xl font-semibold text-white">3. Accès à la documentation</h2>
         <p class="text-sm text-gray-300">
-          Les documents détaillés (présentation, plan de tests, analyses) sont protégés par un accès.
-          Après connexion, les liens apparaissent dans l'espace partenaire.
+          Toutes les ressources (présentation détaillée, plan de tests, recommandations) sont publiques.
+          Pour les consulter :
         </p>
         <ol class="list-decimal space-y-2 pl-6 text-sm">
-          <li>Cliquez sur “Se connecter” dans la section “Espace partenaire”.</li>
-          <li>Saisissez les identifiants fournis par Ricardo.</li>
-          <li>Accédez aux ressources et déconnectez-vous après consultation.</li>
+          <li>Ouvrez le lien “Documentation” dans le menu principal ou rendez-vous sur <code>/docs</code>.</li>
+          <li>Sélectionnez le document souhaité (Présentation, Plan de tests, Guide, Améliorations).</li>
+          <li>Téléchargez ou partagez les URL selon vos besoins.</li>
         </ol>
       </section>
 
@@ -58,9 +58,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-definePageMeta({
-  middleware: ['docs-guard'],
-});
-</script>

@@ -13,7 +13,7 @@
 useSeoMeta({
   title: 'Ricardo Chaves Rodrigues · Développeur Web Fullstack',
   description:
-    'Portfolio hybride de Ricardo Chaves Rodrigues : projets web fullstack, alternance Propulse by CA, compétences RNCP et documentation partenaire.',
+    'Portfolio hybride de Ricardo Chaves Rodrigues : projets web fullstack, alternance Propulse by CA, compétences RNCP et documentation en ligne.',
   ogTitle: 'Portfolio · Ricardo Chaves Rodrigues',
   ogDescription:
     'Découvrez les projets, compétences et analyses RNCP de Ricardo Chaves Rodrigues, développeur web fullstack en alternance.',

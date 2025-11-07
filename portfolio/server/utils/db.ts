@@ -3,7 +3,10 @@ import { existsSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 
 const isTest = process.env.NODE_ENV === 'test' || process.env.VITEST;
-const dbPath = isTest ? ':memory:' : join(process.cwd(), 'data', 'app.db');
+const baseDataDir =
+  process.env.NUXT_DATA_DIR ||
+  (process.env.VERCEL ? '/tmp/portfolio-data' : join(process.cwd(), 'data'));
+const dbPath = isTest ? ':memory:' : join(baseDataDir, 'app.db');
 
 if (!isTest) {
   const dbDir = dirname(dbPath);

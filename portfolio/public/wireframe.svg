@@ -11,7 +11,7 @@
   <rect x="80" y="1320" width="1040" height="260" fill="none" stroke="#ffdd00" stroke-dasharray="16 12" stroke-width="3" rx="24"/>
   <text x="100" y="1400" fill="#ffdd00" font-family="Arial" font-size="28">Galerie + Modal</text>
   <rect x="80" y="1600" width="1040" height="180" fill="none" stroke="#ffdd00" stroke-dasharray="16 12" stroke-width="3" rx="24"/>
-  <text x="100" y="1680" fill="#ffdd00" font-family="Arial" font-size="28">Section Authentification</text>
+  <text x="100" y="1680" fill="#ffdd00" font-family="Arial" font-size="28">Section Documentation</text>
   <rect x="80" y="1820" width="1040" height="120" fill="none" stroke="#ffdd00" stroke-dasharray="16 12" stroke-width="3" rx="24"/>
   <text x="100" y="1900" fill="#ffdd00" font-family="Arial" font-size="28">Formulaire Contact</text>
 </svg>

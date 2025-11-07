@@ -8,6 +8,7 @@
         <NuxtLink class="transition hover:text-[#ffdd00]" to="#about">À propos</NuxtLink>
         <NuxtLink class="transition hover:text-[#ffdd00]" to="#projects">Projets</NuxtLink>
         <NuxtLink class="transition hover:text-[#ffdd00]" to="#highlights">Points forts</NuxtLink>
+        <NuxtLink class="transition hover:text-[#ffdd00]" to="/docs">Docs</NuxtLink>
         <NuxtLink class="transition hover:text-[#ffdd00]" to="#contact">Contact</NuxtLink>
       </nav>
       <NuxtLink
