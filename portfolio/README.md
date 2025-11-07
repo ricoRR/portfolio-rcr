@@ -28,6 +28,9 @@ npm run dev
 | `MAIL_USER` | (Optionnel) Identifiant SMTP. |
 | `MAIL_PASS` | (Optionnel) Mot de passe SMTP. |
 | `MAIL_RECIPIENT` | (Optionnel) Destinataire des messages (défaut : `MAIL_USER`). |
+| `RESEND_API_KEY` | (Optionnel) Clé API Resend pour l'envoi d'emails via leur service. |
+| `RESEND_FROM` | (Optionnel) Adresse d'expédition Resend (ex. `Portfolio <contact@tondomaine.com>`). |
+| `RESEND_TO` | (Optionnel) Adresse de réception (défaut : `MAIL_RECIPIENT`). |
 | `NUXT_DATA_DIR` | (Optionnel) Dossier d'écriture pour la base SQLite (`/tmp/portfolio-data` conseillé sur Vercel). |
  
 ## Scripts

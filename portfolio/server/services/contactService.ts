@@ -1,5 +1,6 @@
 import { createError } from 'h3';
 import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 import db from '../utils/db';
 
 export type ContactPayload = {
@@ -14,6 +15,9 @@ export type MailConfig = {
   mailUser?: string;
   mailPass?: string;
   mailRecipient?: string;
+  resendApiKey?: string;
+  resendFrom?: string;
+  resendTo?: string;
 };
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -79,12 +83,50 @@ export function getRecentContactMessages(limit = 10) {
     .all(limit);
 }
 
+const resendClients = new Map<string, Resend>();
+
+function getResendClient(apiKey: string) {
+  if (!resendClients.has(apiKey)) {
+    resendClients.set(apiKey, new Resend(apiKey));
+  }
+  return resendClients.get(apiKey)!;
+}
+
 export async function sendContactEmail(
   payload: ContactPayload,
   config: MailConfig,
   transporter: nodemailer.Transporter | null = null
 ) {
-  const { mailHost, mailPort, mailUser, mailPass, mailRecipient } = config;
+  const {
+    mailHost,
+    mailPort,
+    mailUser,
+    mailPass,
+    mailRecipient,
+    resendApiKey,
+    resendFrom,
+    resendTo,
+  } = config;
+
+  const targetRecipient = resendTo ?? mailRecipient ?? mailUser;
+  if (!targetRecipient) {
+    throw createError({
+      statusCode: 500,
+      statusMessage: 'MAIL_RECIPIENT_MISSING',
+      message: 'Aucun destinataire configuré pour la réception des messages.',
+    });
+  }
+
+  if (resendApiKey) {
+    const resend = getResendClient(resendApiKey);
+    await resend.emails.send({
+      from: resendFrom ?? 'Portfolio <onboarding@resend.dev>',
+      to: [targetRecipient],
+      subject: `Nouveau message du portfolio - ${payload.name}`,
+      text: `Nom: ${payload.name}\nEmail: ${payload.email}\nMessage:\n${payload.message}`,
+    });
+    return;
+  }
 
   if (!mailHost || !mailPort || !mailUser || !mailPass) {
     throw createError({
@@ -108,8 +150,8 @@ export async function sendContactEmail(
 
   await resolvedTransporter.sendMail({
     from: mailUser,
-    to: mailRecipient ?? mailUser,
-    subject: `Nouveau message du portfolio – ${payload.name}`,
+    to: targetRecipient,
+    subject: `Nouveau message du portfolio - ${payload.name}`,
     text: `Nom: ${payload.name}\nEmail: ${payload.email}\nMessage:\n${payload.message}`,
   });
 }

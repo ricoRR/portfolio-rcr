@@ -8,6 +8,18 @@ import {
   type MailConfig,
 } from '../server/services/contactService';
 
+const resendSendMock = vi.fn();
+
+vi.mock('resend', () => {
+  return {
+    Resend: vi.fn().mockImplementation(() => ({
+      emails: {
+        send: resendSendMock,
+      },
+    })),
+  };
+});
+
 function expectThrow(executable: () => unknown, statusCode: number) {
   try {
     executable();
@@ -22,6 +34,7 @@ function expectThrow(executable: () => unknown, statusCode: number) {
 describe('contactService', () => {
   beforeEach(() => {
     db.exec('DELETE FROM contact_messages');
+    resendSendMock.mockReset();
   });
 
   it('validates and trims the payload', () => {
@@ -116,5 +129,25 @@ describe('contactService', () => {
     await expect(
       sendContactEmail(payload, { mailHost: 'smtp.example.com' }, { sendMail: vi.fn() } as any)
     ).rejects.toMatchObject({ statusCode: 500 });
+  });
+
+  it('envoie via Resend lorsque la clé API est fournie', async () => {
+    const payload = {
+      name: 'Ricardo',
+      email: 'user@example.com',
+      message: 'Message suffisamment long.',
+    };
+
+    await sendContactEmail(payload, {
+      resendApiKey: 'test_key',
+      resendFrom: 'Portfolio <contact@example.com>',
+      resendTo: 'owner@example.com',
+    });
+
+    expect(resendSendMock).toHaveBeenCalledTimes(1);
+    expect(resendSendMock.mock.calls[0][0]).toMatchObject({
+      from: 'Portfolio <contact@example.com>',
+      to: ['owner@example.com'],
+    });
   });
 });

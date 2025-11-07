@@ -28,6 +28,9 @@ export default defineNuxtConfig({
     mailUser: process.env.MAIL_USER,
     mailPass: process.env.MAIL_PASS,
     mailRecipient: process.env.MAIL_RECIPIENT || process.env.MAIL_USER,
+    resendApiKey: process.env.RESEND_API_KEY,
+    resendFrom: process.env.RESEND_FROM,
+    resendTo: process.env.RESEND_TO,
 
     public: {
       siteName: 'Portfolio',
