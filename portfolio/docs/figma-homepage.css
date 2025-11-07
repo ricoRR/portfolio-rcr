@@ -1,0 +1,259 @@
+/* Figma reference stylesheet for the portfolio homepage layout.
+   Purpose: reproduce the structure in Figma without touching the production styles.
+   Each block mirrors a homepage section (Hero → Contact). */
+
+:root {
+  --bg-dark: #0a0a0a;
+  --bg-panel: #151515;
+  --accent: #ffdd00;
+  --text-primary: #ffffff;
+  --text-muted: #9ca3af;
+  --section-width: 1100px;
+  --radius-lg: 32px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 80px 32px 120px;
+  max-width: var(--section-width);
+  margin: 0 auto;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  padding: 64px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, #000000 0%, #121212 45%, #1a1a1a 100%);
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.45);
+}
+
+.hero__infos {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero__subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: rgba(255, 221, 0, 0.7);
+  font-size: 12px;
+}
+
+.hero__title {
+  font-size: 48px;
+  color: var(--accent);
+  margin: 0;
+}
+
+.hero__paragraph {
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero__cta .primary {
+  background: var(--accent);
+  color: #000;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.hero__cta .secondary {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.hero__portrait {
+  border-radius: 40px;
+  background: url('/images/hero-portrait.jpg') center/cover no-repeat;
+  min-height: 420px;
+  box-shadow: 0 0 60px rgba(255, 221, 0, 0.25);
+}
+
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+}
+
+.panel {
+  border-radius: var(--radius-lg);
+  background: var(--bg-panel);
+  padding: 40px;
+  border: 1px solid rgba(255, 221, 0, 0.15);
+}
+
+.panel + .panel {
+  margin-top: 24px;
+}
+
+.panel h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chips span {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 221, 0, 0.3);
+  padding: 8px 20px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* COMPETENCIES */
+.competencies__grid {
+  display: grid;
+  gap: 32px;
+}
+
+.competency-card {
+  border: 1px solid rgba(255, 221, 0, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  background: rgba(21, 21, 21, 0.8);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.competency-card h4 {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: rgba(255, 221, 0, 0.6);
+  margin-bottom: 12px;
+}
+
+/* CAROUSEL */
+.carousel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.carousel__frame {
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 221, 0, 0.2);
+  overflow: hidden;
+  min-height: 360px;
+  background: url('/images/gallery-top-hardware.png') center/cover no-repeat;
+}
+
+/* PROJECTS */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.project-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 221, 0, 0.15);
+  padding: 32px;
+  background: var(--bg-panel);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.gallery__item {
+  border-radius: 24px;
+  min-height: 200px;
+  border: 1px solid rgba(255, 221, 0, 0.2);
+  background-size: cover;
+  background-position: center;
+}
+
+/* CONTACT */
+.contact {
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 221, 0, 0.2);
+  padding: 40px;
+  background: var(--bg-panel);
+  display: grid;
+  gap: 24px;
+}
+
+.contact__form {
+  display: grid;
+  gap: 20px;
+}
+
+.contact__form label {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: rgba(255, 221, 0, 0.7);
+}
+
+.contact__form input,
+.contact__form textarea {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 16px 20px;
+  color: var(--text-primary);
+}
+
+.contact__form button {
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #000;
+  padding: 16px 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+}

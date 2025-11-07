@@ -5,6 +5,11 @@
         <p class="text-xs uppercase tracking-[0.4em] text-[#ffdd00]/60">Qualité</p>
         <h1 class="text-3xl font-semibold text-[#ffdd00]">Plan de tests</h1>
         <p class="text-sm text-gray-300">Stratégie de validation et scénarios principaux pour garantir la qualité du portfolio.</p>
+        <ul class="list-disc space-y-1 pl-6 text-xs text-gray-400">
+          <li><strong>Portée :</strong> contact, navigation, carousel, modale.</li>
+          <li><strong>Responsable :</strong> Ricardo Chaves Rodrigues.</li>
+          <li><strong>Cycle :</strong> à chaque itération ou livraison majeure.</li>
+        </ul>
       </header>
 
       <section class="space-y-3">
@@ -39,7 +44,61 @@
       </section>
 
       <section class="space-y-3">
-        <h2 class="text-xl font-semibold text-white">3. Stratégie</h2>
+        <h2 class="text-xl font-semibold text-white">3. Matrice de tests</h2>
+        <div class="overflow-x-auto rounded-2xl border border-white/10 text-sm">
+          <table class="min-w-full border-collapse text-gray-200">
+            <thead class="bg-white/5 text-xs uppercase tracking-[0.3em] text-[#ffdd00]">
+              <tr>
+                <th class="px-4 py-3 text-left">ID</th>
+                <th class="px-4 py-3 text-left">Fonction</th>
+                <th class="px-4 py-3 text-left">Type</th>
+                <th class="px-4 py-3 text-left">Attendu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t border-white/5">
+                <td class="px-4 py-3 font-semibold">TC01</td>
+                <td class="px-4 py-3">Formulaire contact</td>
+                <td class="px-4 py-3">Fonctionnel</td>
+                <td class="px-4 py-3">Message de succès et envoi accepté par le service externe.</td>
+              </tr>
+              <tr class="border-t border-white/5">
+                <td class="px-4 py-3 font-semibold">TC02</td>
+                <td class="px-4 py-3">Formulaire contact</td>
+                <td class="px-4 py-3">Fonctionnel (erreur)</td>
+                <td class="px-4 py-3">Message d’erreur si service indisponible ou endpoint absent.</td>
+              </tr>
+              <tr class="border-t border-white/5">
+                <td class="px-4 py-3 font-semibold">TC03</td>
+                <td class="px-4 py-3">Formulaire contact</td>
+                <td class="px-4 py-3">Validation</td>
+                <td class="px-4 py-3">Empêcher email vide / format invalide.</td>
+              </tr>
+              <tr class="border-t border-white/5">
+                <td class="px-4 py-3 font-semibold">TC20</td>
+                <td class="px-4 py-3">Navigation anchors</td>
+                <td class="px-4 py-3">UX</td>
+                <td class="px-4 py-3">Scroll fluide vers la section cible.</td>
+              </tr>
+              <tr class="border-t border-white/5">
+                <td class="px-4 py-3 font-semibold">TC21</td>
+                <td class="px-4 py-3">Carousel</td>
+                <td class="px-4 py-3">UI</td>
+                <td class="px-4 py-3">Les items pivotent correctement.</td>
+              </tr>
+              <tr class="border-t border-white/5">
+                <td class="px-4 py-3 font-semibold">TC22</td>
+                <td class="px-4 py-3">Modal galerie</td>
+                <td class="px-4 py-3">Accessibilité</td>
+                <td class="px-4 py-3">Fermeture via clic overlay et touches clavier.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-xl font-semibold text-white">4. Stratégie</h2>
         <p class="text-sm text-gray-300">
           Les tests manuels sont priorisés pour cette version. Un socle de tests
           automatisés (Vitest + Testing Library) est planifié pour les composants
@@ -49,7 +108,7 @@
       </section>
 
       <section class="space-y-3">
-        <h2 class="text-xl font-semibold text-white">4. Outils</h2>
+        <h2 class="text-xl font-semibold text-white">5. Outils</h2>
         <ul class="list-disc space-y-2 pl-6 text-sm">
           <li>Check-list accessibilité avec l'extension Lighthouse (Chrome).</li>
           <li>Tests manuels sur Chrome, Firefox, Edge et Safari mobile.</li>
