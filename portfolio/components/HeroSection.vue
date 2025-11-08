@@ -53,6 +53,12 @@
           >
             Télécharger mon CV
           </a>
+          <NuxtLink
+            class="rounded-full border border-[#ffdd00] px-5 py-2 font-semibold text-[#ffdd00] transition hover:bg-[#ffdd00]/10"
+            to="#contact"
+          >
+            Me contacter
+          </NuxtLink>
         </div>
       </div>
 

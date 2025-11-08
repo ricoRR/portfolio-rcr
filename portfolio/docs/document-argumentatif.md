@@ -1,21 +1,21 @@
 # Document argumentatif
 
 ## Constat
-Le portfolio répond aux objectifs de présentation, mais plusieurs améliorations peuvent booster l'engagement et la fiabilité.
+Mon portfolio remplit la mission de présentation, mais je peux encore muscler l’engagement (meilleure collecte des leads) et fiabiliser les livraisons (moins de manipulations manuelles).
 
 ## Propositions clés
-1. **Automatisation QA** :
-   - Gain : réduction des régressions.
-   - Coût : faible (mise en place Vitest + Playwright).
-2. **Déploiement automatisé** :
-   - Gain : livraison rapide, reproductible.
-   - Coût : configuration GitHub Actions + Render.
-3. **Internationalisation** :
-   - Gain : toucher les recruteurs non francophones.
-   - Coût : traduction FR → EN/ PT, structure i18n.
-4. **Tracking analytique** :
-   - Gain : décisions basées sur les données.
-   - Coût : configuration GA4 ou Plausible.
+1. **Automatisation QA**  
+   - Gain : moins de régressions, je sécurise les features critiques avant chaque soutenance.  
+   - Effort : ajouter Vue Testing Library + Playwright dans la suite actuelle (Vitest est déjà en place).
+2. **Déploiement automatisé**  
+   - Gain : builds reproductibles, je ne dépends plus d’un run local pour Render/Vercel.  
+   - Effort : workflow GitHub Actions (install → test → build → déploiement) + secrets partagés.
+3. **Internationalisation**  
+   - Gain : recruteurs EN/PT comprennent immédiatement mon profil, utile pour les candidatures internationales.  
+   - Effort : factoriser les textes, créer le switcher, traduire les sections clés et les alt texts.
+4. **Tracking analytique**  
+   - Gain : décisions basées sur des données (taux de scroll, conversions).  
+   - Effort : configuration GA4 ou Plausible + bandeau de consentement si nécessaire.
 
 ## Priorisation (ICE)
 | Proposition | Impact | Confiance | Effort | Score |
@@ -26,4 +26,4 @@ Le portfolio répond aux objectifs de présentation, mais plusieurs amélioratio
 | Tracking analytique | 6 | 8 | 3 | 12.0 |
 
 ## Conclusion
-Les actions 1 et 2 sont à prioriser pour sécuriser les livraisons et gagner du temps sur la maintenance. L'internationalisation peut suivre une fois ces fondations posées.
+Je commence par l’automatisation QA et le déploiement continu pour solidifier la base. Une fois ces deux chantiers en place, j’enchaîne sur l’i18n et le tracking afin d’augmenter la portée du site sans sacrifier la qualité.

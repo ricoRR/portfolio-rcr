@@ -1,14 +1,14 @@
 # Propositions d'améliorations
 
 ## 1. Monitoring & retours utilisateurs
-- Collecter systématiquement les messages entrants (stockage SQLite + Resend) pour identifier les points d’intérêt.
-- Suivre les sessions via Google Analytics 4 (tableau récapitulatif prévu).
-- Capitaliser les feedbacks recueillis lors des entretiens recruteurs et mettre à jour le backlog associé.
+- Je journalise chaque message entrant (SQLite + Resend) pour repérer rapidement les sujets qui intéressent le plus les recruteurs.
+- J’ajoute GA4/Plausible pour confronter ces retours à des données de navigation (temps sur la page projets, taux de scroll).
+- Après chaque entretien recruteur, je note les remarques clés et j’alimente le backlog afin de boucler la boucle d’amélioration.
 
 ## 2. Ergonomie & accessibilité
-- Contraste conforme WCAG AA (audits Lighthouse réguliers).
-- Navigation clavier : focus visible, modale fermée via ESC.
-- À prévoir : bouton « Aller au contenu » et traductions des textes alternatifs en anglais.
+- Je garde un contraste AA (audits Lighthouse réguliers) et je consigne les écarts dans un log d’accessibilité.
+- La navigation clavier reste prioritaire : focus visible sur tous les CTA, modale qui se ferme à l’ESC, piqûre de rappel à chaque refacto.
+- À insérer dans la roadmap courte : bouton « Aller au contenu » et traductions des textes alternatifs en anglais pour préparer l’i18n.
 
 ## 3. Pistes d'évolution produit
 1. **Tests automatisés** : compléter Vitest avec Vue Testing Library puis Playwright pour les parcours critiques.

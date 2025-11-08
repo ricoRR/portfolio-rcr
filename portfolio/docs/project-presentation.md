@@ -33,7 +33,7 @@ Je m’adresse aux responsables techniques et recruteurs qui recherchent un alte
 ## Approche hybride
 - **Présentation** : sections publiques Hero, À propos, Points forts, Projets et Galerie qui condensent mon meilleur profil pour les recruteurs.
 - **Apprentissage** : section Documentation où je décris ma démarche, mes tests et mon suivi RNCP.
-- **Mise à jour** : backlog Trello + revues hebdomadaires (cf. `docs/qa-monitoring.md`, `docs/improvement-proposals.md`).
+- **Mise à jour** : backlog maintenu dans mon Google Sheet (colonnes Priorité/Statut) + revues hebdomadaires (cf. `docs/qa-monitoring.md`, `docs/improvement-proposals.md`).
 
 ## Analyse des réalisations et progression
 | Bloc RNCP | Compétences clés travaillées | Réalisations & preuves | Progression / axes |

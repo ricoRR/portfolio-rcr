@@ -2,7 +2,7 @@
 
 ## Outils mis en place
 - **Gestion de versions** : Git (workflow feature branch), dépôt GitHub privé.
-- **Gestion de projet** : Trello avec colonnes Backlog → En cours → Revue → Terminé.
+- **Gestion de projet** : tableau Kanban maison dans Google Sheet (colonnes Backlog → En cours → Revue → Terminé).
 - **Communication** : Discord (synchrone) et email (suivi hebdomadaire).
 - **CI/CD (prévu)** : GitHub Actions pour automatiser les tests et le déploiement.
 - **Qualité & build** : Vitest pour les tests unitaires, Docker pour les livraisons reproductibles.
